@@ -1,0 +1,129 @@
+[
+	{
+		"calledOn": {
+			"event": "user_text",
+			"content": "ping",
+			"cmdPrefix": true
+		},
+		"cmdBlocks":[
+			{
+				"block_type": "send_text",
+				"content": "%user% pong %user.mention%",
+				"channel": -1
+			},
+			{
+				"block_type": "send_text",
+				"content": "asdadasdasdas",
+				"channel": "771121294577500160"
+			}
+		]
+	},
+
+	{
+		"calledOn": {
+			"event": "user_text",
+			"content": "private",
+			"cmdPrefix": true
+		},
+		"cmdBlocks":[
+			{
+				"block_type": "send_private_text",
+				"content": "welcome to %servername%",
+				"receiver": "%user%"
+			}
+		]
+	},
+
+	{
+		"calledOn": {
+			"event": "user_text",
+			"content": "mystatus",
+			"cmdPrefix": true
+		},
+		"cmdBlocks":[
+			{
+				"block_type": "send_private_text",
+				"content": "ur status is\n%user.status%",
+				"receiver": "%user%"
+			}
+		]
+	},
+
+	{
+		"calledOn": {
+			"event": "user_text",
+			"content": "mystatushere",
+			"cmdPrefix": true
+		},
+		"cmdBlocks":[
+			{
+				"block_type": "send_text",
+				"content": "ur status is\n%user.status%",
+				"channel": -1
+			}
+		]
+	},
+
+
+
+	{
+		"calledOn": {
+			"event": "user_text",
+			"content": "debugjoin",
+			"cmdPrefix": true
+		},
+		"cmdBlocks":[
+			{
+				"block_type": "send_private_text",
+				"content": "welcome to %servername%",
+				"receiver": "%user%"
+			},
+			{
+				"block_type": "if_statement",
+				"checkFor": "%user%",
+				"equalTo": "%servername%",
+				"hasToBeTrue": true,
+
+				"then":{
+					"cmdBlocks":[
+						{
+							"block_type": "give_role",
+							"user": "%user%",
+							"roleid": "771139046671908934"
+						},
+						{
+							"block_type": "send_text",
+							"content": "%user% is promoting the server",
+							"channel": -1
+						}
+					]
+				},
+
+				"else":{
+					"cmdBlocks":[
+						{
+							"block_type": "send_text",
+							"content": "An user joined lol",
+							"channel": -1
+						}
+					]
+				}
+			}
+		]
+	},
+
+	{
+		"calledOn": {
+			"event": "user_join"
+		},
+		"cmdBlocks":[
+			{
+				"block_type": "send_text",
+				"content": "sumbd joined",
+				"channel": "771121294577500160"
+			}
+		]
+	}
+
+
+]

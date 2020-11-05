@@ -1,0 +1,17 @@
+[
+	{
+		"calledOn": {
+			"event": "user_text",
+			"content": "ping",
+			"cmdPrefix": true
+		},
+		"cmdBlocks":[
+			{
+				"block_type": "send_text",
+				"content": "meow .",
+				"channel": -1
+			}
+		]
+	}
+
+]
